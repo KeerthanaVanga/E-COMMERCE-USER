@@ -1,0 +1,272 @@
+// config/productTypes.js
+const productTypes = {
+  "": { label: "Select Product Type", fields: [] },
+  clothing: {
+    label: "Clothing",
+    fields: [
+      {
+        name: "category",
+        label: "Category",
+        type: "select",
+        options: ["Men", "Women", "Kids"],
+        required: true,
+      },
+      {
+        name: "subCategory",
+        label: "Sub Category",
+        type: "select",
+        options: ["Shirt", "T-Shirt", "Pants", "Jackets", "Sweter"],
+        required: true,
+      },
+
+      {
+        name: "brand",
+        label: "Brand",
+        type: "text",
+        placeholder: "Jocket, etc.",
+        required: true,
+      },
+      {
+        name: "material",
+        label: "Material",
+        type: "text",
+        placeholder: "Cotton, Polyester, etc.",
+        required: true,
+      },
+      {
+        name: "sizes",
+        label: "Available Sizes",
+        type: "checkbox-group",
+        options: ["S", "M", "L", "XL", "XXL"],
+        required: true,
+      },
+    ],
+  },
+  footwear: {
+    label: "Footwear",
+    fields: [
+      {
+        name: "category",
+        label: "Category",
+        type: "select",
+        options: ["Men", "Women", "Kids"],
+        required: true,
+      },
+      {
+        name: "subCategory",
+        label: "Sub Category",
+        type: "select",
+        options: ["Shoes", "Sandels", "Slippers", "Lophers", "Formal"],
+        required: true,
+      },
+
+      {
+        name: "brand",
+        label: "Brand",
+        type: "text",
+        placeholder: "Addidas,Bata etc.",
+        required: true,
+      },
+      {
+        name: "material",
+        label: "Material",
+        type: "text",
+        placeholder: "Cotton, Polyester, etc.",
+        required: false,
+      },
+      {
+        name: "sizes",
+        label: "Available Sizes",
+        type: "checkbox-group",
+        options: ["5", "6", "7", "8", "9", "10", "11"],
+        required: false,
+      },
+    ],
+  },
+  electronics: {
+    label: "Electronics",
+    fields: [
+      {
+        name: "category",
+        label: "Category",
+        type: "select",
+        options: [
+          "Mobile",
+          "Laptop",
+          "Headphones",
+          "Smart Watch",
+          "Accessories",
+        ],
+        required: true,
+      },
+      {
+        name: "brand",
+        label: "Brand",
+        type: "text",
+        placeholder: "Apple, Samsung, etc.",
+        required: true,
+      },
+      {
+        name: "model",
+        label: "Model",
+        type: "text",
+        placeholder: "iPhone 15, Galaxy S24, etc.",
+        required: false,
+      },
+      {
+        name: "warranty",
+        label: "Warranty (months)",
+        type: "number",
+        placeholder: "12",
+        required: false,
+      },
+      {
+        name: "specifications",
+        label: "Key Specifications",
+        type: "textarea",
+        placeholder: "RAM, Storage, Display, etc.",
+        required: false,
+      },
+    ],
+  },
+  books: {
+    label: "Books",
+    fields: [
+      {
+        name: "category",
+        label: "Category",
+        type: "select",
+        options: [
+          "Fiction",
+          "Non-Fiction",
+          "Educational",
+          "Children",
+          "Comics",
+        ],
+        required: true,
+      },
+      {
+        name: "author",
+        label: "Author",
+        type: "text",
+        placeholder: "Author name",
+        required: true,
+      },
+      {
+        name: "publisher",
+        label: "Publisher",
+        type: "text",
+        placeholder: "Publisher name",
+        required: false,
+      },
+      {
+        name: "isbn",
+        label: "ISBN",
+        type: "text",
+        placeholder: "978-0000000000",
+        required: false,
+      },
+      {
+        name: "pages",
+        label: "Number of Pages",
+        type: "number",
+        placeholder: "250",
+        required: false,
+      },
+      {
+        name: "language",
+        label: "Language",
+        type: "select",
+        options: ["English", "Hindi", "Spanish", "French", "German"],
+        required: false,
+      },
+    ],
+  },
+  "home-garden": {
+    label: "Home & Garden",
+    fields: [
+      {
+        name: "category",
+        label: "Category",
+        type: "select",
+        options: ["Furniture", "Decor", "Kitchen", "Garden Tools", "Lighting"],
+        required: true,
+      },
+      {
+        name: "material",
+        label: "Material",
+        type: "text",
+        placeholder: "Wood, Metal, Plastic, etc.",
+        required: false,
+      },
+      {
+        name: "dimensions",
+        label: "Dimensions",
+        type: "text",
+        placeholder: "L x W x H (in cm)",
+        required: false,
+      },
+      {
+        name: "weight",
+        label: "Weight (kg)",
+        type: "number",
+        placeholder: "5.5",
+        required: false,
+      },
+      {
+        name: "color",
+        label: "Color",
+        type: "text",
+        placeholder: "Red, Blue, etc.",
+        required: false,
+      },
+    ],
+  },
+  sports: {
+    label: "Sports & Fitness",
+    fields: [
+      {
+        name: "category",
+        label: "Category",
+        type: "select",
+        options: [
+          "Fitness Equipment",
+          "Outdoor Sports",
+          "Indoor Games",
+          "Sportswear",
+        ],
+        required: true,
+      },
+      {
+        name: "brand",
+        label: "Brand",
+        type: "text",
+        placeholder: "Nike, Adidas, etc.",
+        required: false,
+      },
+      {
+        name: "size",
+        label: "Size/Dimension",
+        type: "text",
+        placeholder: "Size or dimensions",
+        required: false,
+      },
+      {
+        name: "weight",
+        label: "Weight (kg)",
+        type: "number",
+        placeholder: "2.5",
+        required: false,
+      },
+      {
+        name: "skill_level",
+        label: "Skill Level",
+        type: "select",
+        options: ["Beginner", "Intermediate", "Advanced", "Professional"],
+        required: false,
+      },
+    ],
+  },
+};
+
+export default productTypes;
