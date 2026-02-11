@@ -76,14 +76,17 @@ export const loginThunk = (formData, mode) => {
       }
 
       toast.success(
-        mode === "signup" ? "Signup successful!" : "Login successful!"
+        mode === "signup" ? "Signup successful!" : "Login successful!",
       );
       dispatch(authActions.setAuth(true));
 
       return redirect("/home");
     } catch (error) {
       console.error(error);
-      toast.error("Something went wrong. Please try again.");
+      toast.error(
+        error?.response?.data?.message ||
+          "Something went wrong. Please try again.",
+      );
       return null;
     }
   };
